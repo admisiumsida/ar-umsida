@@ -13,7 +13,7 @@
 <body>
   <div class="hover-area">
     <!-- Musik -->
-    <audio id="bg-music" src="./asset/hymnecut.mp3" loop></audio>
+    <audio id="bg-music" src="music.mp3" loop></audio>
 
     <!-- Tombol Musik -->    
     <button id="toggle-music-button">
@@ -75,10 +75,10 @@
         target.addEventListener("targetFound", async () => {
           toggleBtn.style.display = "block";
 
-          // if (audio.paused) {
-          //   audio.play();
-          //   icon.classList.replace("fa-play", "fa-pause");
-          // }
+           if (audio.paused) {
+             audio.play();
+             icon.classList.replace("fa-play", "fa-pause");
+           }
 
           for (let i = 0; i < layers.length; i++) {
             const { el, z } = layers[i];
